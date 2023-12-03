@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <style>
+        .box{
+            margin: 100px auto;
+            width: 600px;
+            height: auto;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: .8rem;
+            box-shadow: 0px 0px 15px 0px #00000032;
+        }
+        .boxImage{
+            overflow: hidden;
+            width: 49%;
+        }
+        .boxImage img{
+            width: 100%;
+        }
+    </style>
+<body>
+    <div class="box">
+        <div class="boxContent">
+            <h3 id="name">
+
+            </h3>
+            <h4 id="sex"></h4>
+            <h3>
+                department:
+            </h3>
+            <ul id="department">
+
+            </ul>
+        </div>
+        <div class="boxImage">
+            <img src="Po_John.JPG">
+        </div>
+    </div>
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+<script>
+    $.getJSON("http://192.168.27.166/Server/data/test/Data.JSON",function(data){
+        $("#name").html("Name: " + data.name)
+        $("#sex").html("Sex: " + data.sex)
+        data.department.forEach(function (res){
+            $("#department").append(`<li>${res}</li>`)
+        })
+    })
+</script>
+</body>
+</html>

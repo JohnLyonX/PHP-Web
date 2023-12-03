@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.publicButton{
+    width: auto;
+    height: 35px;
+    padding: 0 20px;
+    border-radius: 1.2rem;
+    border: 1px solid black;
+    background: none;
+    color: black;
+    margin-top: 10px;
+}
+.publicButton:hover{
+    background: black;
+    color: white;
+}

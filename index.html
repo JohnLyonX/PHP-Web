@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/public.css" rel="stylesheet" type="text/css">
+    <link href="http://192.168.27.166/Server/css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
+    <link href="css/iconfont.css" rel="stylesheet" type="text/css">
+    <script src="http://192.168.27.166/Server/js/jquery-3.2.1.min.js"></script>
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+<!--导航栏-->
+
+        <header class="navbarbefore">
+            <div class="navbarBeforeContent">
+                <div class="logo" id="logoContent">
+                    <img src="http://192.168.27.166/Server/data/logo/logo.png" alt="logo" id="logo">
+
+                </div>
+                <div>
+                    <button type="button" class="btn btn-info" id="LogIn">Log In</button>
+                </div>
+
+            </div>
+            <hr style="margin-top: -10px">
+
+        </header>
+
+
+    <div style="width: 100%;height: 60px"></div>
+    <div class="login-content" id="login-content">
+        <div class="login-container">
+            <div class="login-closs">关闭</div>
+            <h2>登录</h2>
+                <div class="input-container">
+                    <label for="username">用户名</label>
+                    <input type="text" id="username" value="登陆" placeholder="请输入用户名" />
+                </div>
+                <div class="input-container">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" placeholder="请输入密码" />
+                </div>
+                <button type="submit" id="submit">登录</button>
+        </div>
+    </div>
+
+<!--摘要-->
+    <div class="container my-3">
+        <div class="header-content">
+            <div class="attendant row">
+                <div class="col-lg-7">
+                    <img src="http://192.168.27.166/Server/data/avatar/avatar.JPG" width="100%">
+                </div>
+
+                <div class="attendant-content col-lg-5">
+                    <h3>Po Join <span class="iconfont icon-apple_line"></span></h3>
+                    <h5><span class="badge badge-warning">管理员</span></h5>
+                    <h6>更新时间:2023 年 2 月</h6>
+                </div>
+            </div>
+            <div class="public">
+                <div class="public-text">
+                    <h4>公告</h4>
+                    <h6 id="public"></h6>
+                    <div>
+                        <span class="badge badge-primary" id="publicDate"> <span class="iconfont icon-calendar_2_line"></span></span>
+                    </div>
+                    </div>
+                <div class="plan">
+                    <h4>Plan</h4>
+                    <h6>制定你学习的Plan,让每一天都过的充实些</h6>
+                    <div>
+                    <span class="badge badge-info go-plan"><a href="#" id="go-plan-btn">前往制定<span class="iconfont icon-arrow_right_line"></span></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="plan-item">
+        <div class="plan-item-content">
+            <div class="plan-closs">关闭</div>
+            <form id="planForm">
+                <div>
+                    <label for="get_name" class="planTitle">姓名</label>
+                    <input type="text" class="form-control" id="get_name" name="name">
+                    <small id="emailHelp1" class="form-text text-muted">请输入你的姓名</small>
+                </div>
+
+
+                <div>
+                    <label for="get_date" class="planTitle">计划日期</label>
+                    <input type="date" class="form-control" id="get_date" name="date">
+                    <small class="form-text text-muted">选择你的提交日期</small>
+                </div>
+                <div>
+                    <label for="get_plan" class="planTitle">制定你本周的计划</label>
+                    <br>
+                    <textarea id="get_plan" name="plan"></textarea>
+                </div>
+                <div>
+                    <label for="get_week" class="planTitle">计划周</label>
+                    <br>
+                    <select class="plan-select" name="week" id="get_week">
+
+                    </select>
+
+                </div>
+                <small class="form-text text-muted">选择你提交的计划所在周</small>
+                <button type="submit" class="btn btn-primary" style="margin-top: 30px" id="planSubmit">提交</button>
+            </form>
+        </div>
+    </div>
+
+
+<!--娱乐-->
+    <div class="container">
+        <div class="amuseContent" style="margin: 0;">
+        <div class="music">
+            <div class="music-header" style="margin-left: 10px;">
+                <h4>每日推荐</h4>
+            </div>
+            <div class="music-content">
+                    <div class="music-content-body-item">
+                        <div class="music-content-body-item-img">
+                            <img src="http://192.168.27.166/Server/data/music/image(music).jpg">
+                        </div>
+                        <div class="music-content-body-item-content">
+                            <div class="music-content-introduce">
+                                <h5 id="musicName" style="margin-top:10px;font-size: 18px; font-weight: 500;">歌曲名:xxx</h5>
+                                <h6 id="musicAuthor" style="margin-top: 10px; font-size: 13px; font-weight: 400;">作者:xxx</h6>
+                            </div>
+
+                            <div style="margin-top: 140px">
+                                <div class="pace">
+                                    <div class="pace-content"></div>
+                                </div>
+
+                                <div class="music-timeContent">
+                                    <div id="PassTime" style="font-size: 12px;">00:00</div>
+                                    <span class="iconfont icon-bofang" id="playBtn-content"></span>
+                                    <div id="TotalTime" style="font-size: 12px;">00:00</div>
+                                </div>
+                            </div>
+
+                            <audio src="http://192.168.27.166/Server/data/music/music.mp3" id="audio"></audio>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
+
+        <div class="synthesizeContent">
+            <div class="sentence">
+                <div class="sentenceContent">
+                    <h5 id="ctext"></h5>
+                    <h5 id="etext"></h5>
+                </div>
+            </div>
+            <div class="charts">
+                <div class="chartsContent">
+                    <h5 style="font-weight: 500;">Coding Stars</h5>
+                    <ol id="codingStars" style="font-weight: 300;">
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="container" style="display: flex;flex-flow: column;">
+        <div class="study">
+            <div class="synthesize">
+                <div class="synthesizeTitle">
+                    <h4>前端学习资料</h4>
+                    <div class="iconfont icon-xuexi"></div>
+                </div>
+
+                <button id="GoToStudy" class="publicButton">Go To Study</button>
+            </div>
+            <div class="synthesize">
+                <div class="synthesizeTitle">
+                    <h4>赛题练习</h4>
+                    <div class="iconfont icon-code"></div>
+                </div>
+
+                <button id="GoToExercise" class="publicButton">Go To Exercise</button>
+            </div>
+        </div>
+        <div class="study">
+            <div class="synthesize">
+                <div class="synthesizeTitle">
+                    <h4>精选照片</h4>
+                    <div class="iconfont icon-tupian"></div>
+                </div>
+
+                <button id="GoToView" class="publicButton">Go To View</button>
+            </div>
+
+            <div class="synthesize">
+                <div class="synthesizeTitle">
+                    <h4>建斌Network</h4>
+                    <div class="iconfont icon-wangluo"></div>
+                </div>
+
+                <button id="GoToJoin" class="publicButton">Go To Join</button>
+            </div>
+        </div>
+
+    </div>
+
+<!--    开发软件下载-->
+    <div class="container">
+        <div class="WebStorm">
+            <img src="http://192.168.27.166/Server/logo/webstorm.png" width="80px" style="margin-bottom: 15px">
+            <h4>WebStorm</h4>
+            <h6 style="font-weight: 300;">
+                最智能的 JavaScript IDE
+                WebStorm 是一个适用于 JavaScript 和相关技术的集成开发环境。
+            </h6>
+            <button id="webstorm" class="publicButton">Download</button>
+        </div>
+        <div class="VScode">
+            <img src="http://192.168.27.166/Server/logo/vscode.png" width="80px" style="margin-bottom: 15px">
+            <h4>Visual Studio Code</h4>
+            <h6 style="font-weight: 300;">
+                轻量级的编辑器 重新定义代码编辑 拥有丰富的插件 重要的是免费且好用。
+            </h6>
+            <button id="vscode" class="publicButton">Download</button>
+        </div>
+        <div class="Dreamweaver">
+            <img src="http://192.168.27.166/Server/logo/dw.png" width="80px" style="margin-bottom: 15px;">
+            <h4>Adobe Dreamweaver</h4>
+            <h6 style="font-weight: 300;">
+                制作适用于各种浏览器或设备的精美网站
+                利用支持 HTML、CSS、JavaScript 等内容的 Web 设计软件，几乎随处都能快速制作并发布网页。
+            </h6>
+            <button id="dreamweaver" class="publicButton">Download</button>
+        </div>
+    </div>
+
+
+<div class="applyFor-content" id="applyFor-content">
+
+    <div class="applyFor-container">
+        <div class="applyFor-closs">关闭</div>
+        <h2>Join Us</h2>
+        <form id="applyForndata">
+            <div class="applyForinput">
+                <label for="the_name">姓名</label>
+                <input type="text" id="the_name" placeholder="请输入您的姓名" name="name"/>
+            </div>
+            <div class="applyForinput">
+                <label for="the_classes">班级</label>
+                <input type="text" id="the_classes" placeholder="请输入您的班级" name="classes"/>
+            </div>
+            <div class="applyForinput">
+                <label for="the_number">联系方式</label>
+                <input type="text" id="the_number" placeholder="请输入您的微信号" name="number"/>
+            </div>
+        </form>
+
+        <button type="submit" class="publicButton" id="applyForn">提交</button>
+    </div>
+</div>
+
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <div class="footer-left">
+                    <h4 class="footerTitle">关于我们</h4>
+                    <h6>Web前端竞赛室，官方网站</h6>
+                    <h6>Team: Hello Word</h6>
+                    <h6>Copyright &copy; WebCompeteTeam 2023-2024</h6>
+                </div>
+                <div class="footer-center">
+                    <h4 class="footerTitle">联系我们</h4>
+                    <h6>微信：chasingDreams_L0611</h6>
+                    <h6>电话：+86 158 1318 3932</h6>
+                    <h6>地址：计算机中心四楼电脑五室</h6>
+                </div>
+                <div class="footer-right">
+                    <h4 class="footerTitle">加入我们</h4>
+                    <h6>如果你对Web前端开发有兴趣，那么加入我们是你最好的选择</h6>
+                    <button class="publicButton" id="applyFory">申请加入我们</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
